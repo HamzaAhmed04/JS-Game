@@ -11,7 +11,6 @@ function abc(event) {
 
   if (punching) return;
 
-  // Move right (D)
   if (event.keyCode === 68 && !punching) {
     man += 30;
     standing.style.left = man + 'px';
@@ -20,7 +19,6 @@ function abc(event) {
       : "https://fightersgeneration.com/characters2/iron-walk.gif";
   }
 
-  // Move left (A)
   if (event.keyCode === 65 && !punching) {
     man -= 30;
     standing.style.left = man + 'px';
@@ -29,7 +27,6 @@ function abc(event) {
       : "https://fightersgeneration.com/characters2/ironman-shield.gif";
   }
 
-  // Fly up (W)
   if (event.keyCode === 87 && !flying && !punching) {
     flying = true;
     fly = 100;
@@ -37,7 +34,6 @@ function abc(event) {
     standing.src = "https://fightersgeneration.com/characters2/iron-fly.gif";
   }
 
-  // Come down (S)
   if (event.keyCode === 83 && flying && !punching) {
     flying = false;
     fly = 300;
@@ -47,7 +43,6 @@ function abc(event) {
     }, 400);
   }
 
-  // Punch (J)
   if (event.keyCode === 74 && !punching) {
     punching = true;
     standing.src = "https://fightersgeneration.com/characters2/iron-gem.gif";
@@ -65,3 +60,4 @@ function abc(event) {
 }
 
 window.onkeydown = abc;
+
